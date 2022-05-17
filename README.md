@@ -6,4 +6,4 @@
 
 #### A little sneak peak of the design just below :
 
-![designo](/Designo-project.png)
+![designo](./Ressources/images/designo-project.png)
