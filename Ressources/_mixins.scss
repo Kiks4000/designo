@@ -1,0 +1,15 @@
+@mixin gradient-bubble ($color-start, $color-end, $degre) {
+    background: linear-gradient($degre, $color-start 0%, $color-end 100%);
+}
+
+
+/* .bubble {
+    @include gradient-bubble(rgba(239, 230, 230, 1), rgba(253, 253, 253, 1), 90deg);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et juste copier coller le reste ou vous en avez besoin :p*/
