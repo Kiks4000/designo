@@ -2,12 +2,6 @@
     background: linear-gradient($degre, $color-start 0%, $color-end 100%);
 }
 
-@mixin font {
-    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-}
-
-
 /* .bubble {
     @include gradient-bubble(rgba(239, 230, 230, 1), rgba(253, 253, 253, 1), 90deg);
     width: 200px;

@@ -1,5 +1,6 @@
 @import '_reset.scss';
-@include font;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import'_variables';
 
 // @import '_font.scss';
 
@@ -7,7 +8,11 @@ body{
     max-width: 375px;
     height: 2000px;
     @media screen and(min-width:768px) {
-        width: 768px;
+        max-width: 768px;
+    }
+    @media screen and(min-width:1440px) {
+        max-width: 1440px;
+        margin: auto;
     }
     header{
         height: 10rem;
@@ -24,12 +29,24 @@ footer{
         position: relative;
         z-index: auto;
     }
+    @media screen and(min-width:1440px) {
+        max-width: 1440px;
+        position: relative;
+        z-index: auto;
+    }
     .footer__upper-container{
         @media screen and(min-width:768px) {
             width: 69rem;
             height: 35rem;
             margin-left: 3.7rem;
             margin-bottom: -8.6rem;
+            z-index: 2;
+        }
+        @media screen and(min-width:1440px) {
+            width: 111.1rem;
+            height: 29.2rem;
+            margin-bottom: -7.2rem;
+            margin-left: 16.5rem;
             z-index: 2;
         }
         width: 32.7rem;
@@ -52,37 +69,86 @@ footer{
                 object-fit: cover;
                 position: absolute;
             }
+            @media screen and(min-width:1440px) {
+                display: none;
+            }
         }
-        .text{
+        .desktop{
+            display: none;
+            @media screen and (min-width:1440px){
+                display: initial;
+                object-fit: cover;
+                position: absolute;
+            }
+        }
+        .upper-content{
             @media screen and (min-width:768px){
                 padding: 5.7rem 13rem;
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and(min-width:1440px) {
+                flex-direction: row;
+                justify-content: flex-start;
+                padding: 7.2rem 9.6rem;
+                gap: 32.7rem;
             }
             padding: 6.4rem 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            h2{
-                margin-bottom: 0.6rem;
-                position: relative;
-                font-family: 'Jost';
-                font-size: 40px;
-                font-weight: 500;
-                line-height: 48px;
-                text-align: center;
-                word-spacing: +2;
-                color: white;
-            }
-            p{
-                margin-bottom: 2.5rem;
-                position: relative;
-                font-family: 'Jost';
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 26px;
-                letter-spacing: 0px;
-                text-align: center;
-                color: white;
+            .text{
+                @media screen and(min-width:1440px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @media screen and(min-width:1440px) {
+                    display: flex;
+                    flex-direction: column;
+                    width: 45.9rem;
+                    height: 17.4rem;
+                    justify-self: flex-end;
+                }
+                h2{
+                    @media screen and (min-width:768px){
+                        justify-content: center;
+                        align-items: center;
+                        width: 28rem;
+                        margin: 0 auto 0.6rem;
+                    }
+                    @media screen and (min-width:1440px){
+                        padding: 0 5rem 0 0;
+                        text-align: left;
+                        align-self: flex-start;
+                        width: 36rem;
+                    }
+                    margin-bottom: 0.6rem;
+                    position: relative;
+                    font-family: 'Jost';
+                    font-size: 40px;
+                    font-weight: 500;
+                    line-height: 48px;
+                    text-align: center;
+                    word-spacing: +2;
+                    color: $color-second;
+                }
+                p{
+                    @media screen and (min-width:1440px){
+                        text-align: left;
+                    }
+                    margin-bottom: 2.5rem;
+                    position: relative;
+                    font-family: 'Jost';
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                    text-align: center;
+                    color: $color-second;
+                }
             }
             a,
             a:link,
@@ -95,7 +161,7 @@ footer{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: white;
+                background-color: $color-second;
                 font-family: Jost;
                 font-size: 15px;
                 font-weight: 500;
@@ -114,6 +180,11 @@ footer{
             height: 42.3rem;
             padding-top: 16.6rem;
         }
+        @media screen and(min-width:1440px) {
+            width: 144rem;
+            height: 39.3rem;
+            padding: 14.4rem 16.4rem 7.2rem 16.5rem;
+        }
         width: 37.5rem;
         height: 80rem;
         background-color: #1D1C1E;
@@ -121,12 +192,18 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: white;
+        color: $color-second;
         .footer__lower-container__tablet-container{
             @media screen and(min-width:768px) {
                 display: flex;
                 flex-direction: row;
                 gap: 11.8rem;
+                margin-bottom: 4rem;
+            }
+            @media screen and(min-width:1440px) {
+                display: flex;
+                flex-direction: row;
+                gap: 52.4rem;
                 margin-bottom: 4rem;
             }
             .footer__lower-container__logo{
@@ -144,7 +221,7 @@ footer{
                 }
                 width: 32.7rem;
                 height: 0.1px;
-                color: rgb(255, 255, 255,);
+                color: $color-second;
                 opacity: 0.1;
                 margin-bottom: 3.2rem;
             }
@@ -164,7 +241,7 @@ footer{
                         align-items: center;
                         margin-bottom: 3.2rem;
                         a{
-                            color: white;
+                            color: $color-second;
                             text-transform: uppercase;
                             font-family: Jost;
                             font-size: 14px;
@@ -182,18 +259,29 @@ footer{
                 display: initial;
                 width: 69rem;
                 height: 0.1rem;
-                color: rgb(255, 255, 255,);
+                color: $color-second;
                 opacity: 0.1;
                 margin-bottom: 3.1rem;
+            }
+            @media screen and(min-width:1440px) {
+                width: 111rem;
+                height: 0.1rem;
             }
         }
         .footer__lower-container__tablet-container-two{
             @media screen and(min-width:768px){
                 display: flex;
+                gap: 3.4rem;
+            }
+            @media screen and(min-width:1440px) {
+                display: flex;
+                justify-content: flex-start;
+                gap: 20rem;
             }
             .footer__adress{
                 @media screen and(min-width:768px){
-                    margin-right: 1rem;
+                    margin-right: 5.6rem;
+                    align-items: flex-start;
                 }
                 display: flex;
                 flex-direction: column;
@@ -214,7 +302,7 @@ footer{
                     font-size: 20px;
                     line-height: 26px;
                     letter-spacing: 5;
-                    color: white;
+                    color: $color-second;
                     opacity: 0.5;
                 }
                 p{
@@ -227,14 +315,13 @@ footer{
                     font-size: 16px;
                     line-height: 26px;
                     text-align: center;
-                    color: white;
+                    color: $color-second;
                     opacity: 0.5;
                 }
             }
             .footer__lower-contact{
                 @media screen and(min-width:768px){
                     margin-bottom: 0;
-                    margin-right: 5rem;
                 }
                 margin-bottom: 4rem;
                 h3{
@@ -246,18 +333,26 @@ footer{
                         line-height: 26px;
                         text-align: left;
                     }
+                    @media screen and(min-width:1440px) {
+                        margin-left: -12rem;
+                        margin-right: 21rem;
+                    }
                     font-family: 'Jost';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 26px;
                     letter-spacing: 5;
-                    color: white;
+                    color: $color-second;
                     opacity: 0.5;
                 }
                 p{
                     @media screen and(min-width:768px){
                         text-align: left;
+                    }
+                    @media screen and(min-width:1440px) {
+                        margin-left: -12rem;
+                        margin-right: 21rem;
                     }
                     font-family: 'Jost';
                     font-style: normal;
@@ -265,20 +360,23 @@ footer{
                     font-size: 16px;
                     line-height: 26px;
                     text-align: center;
-                    color: white;
+                    color: $color-second;
                     opacity: 0.5;
                     a,
                     a:link,
                     a:visited{
-                        color: white;
+                        color: $color-second;
                     }
                 }
             }
             .footer__social{
                 width: 18.4rem;
                 height: 2.4rem;
-                margin: auto;
+                margin: auto;;
                 .footer__social__list{
+                    @media screen and(min-width:768px){
+                        gap: 1.5rem;
+                    }
                     display: flex;
                     justify-content: space-between;
                     a,
