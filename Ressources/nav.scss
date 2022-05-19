@@ -2,21 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import'_variables';
 
+
+body{
+    background-color: aqua;
+}
+
 header{
-    width: 37.5rem;
     height: 9.6rem;
-    .header__menu-container {
-        display: flex;
-        img {
-            width: 20.2rem;
-            height: 2.7rem;
-            }
-        .header__menu-container__hamburger {
-            hr {
-            height: 0.4rem;
-            color: $bg-dark;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    &__content{
+        width: 32.5rem;
+        height: 2.7rem;
+        &__logo{
+            align-self: flex-start;
+        }
+        &__hammenu{
             width: 2.4rem;
+            height: 0.4rem;
+            background: black;
+            position: relative;
+            }
+        &__hammenu::before{
+            width: 2.4rem;
+            height: 0.4rem;
+            background: black;
+            position: absolute;
+            top: -0.8px;
+            content: ".";
+            }
+        &__hammenu::before{
+            width: 2.4rem;
+            height: 0.4rem;
+            background: black;
+            position: absolute;
+            top: -0.8px;
+            content: ".";
             }
         }
     }
-}
+    nav{
+        display: none;
+    }

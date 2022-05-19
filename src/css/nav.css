@@ -18,21 +18,51 @@ a:link {
   text-decoration: none;
 }
 
-header {
-  width: 37.5rem;
-  height: 9.6rem;
+body {
+  background-color: aqua;
 }
-header .header__menu-container {
+
+header {
+  height: 9.6rem;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-header .header__menu-container img {
-  width: 20.2rem;
+header__content {
+  width: 32.5rem;
   height: 2.7rem;
 }
-header .header__menu-container .header__menu-container__hamburger hr {
-  height: 0.4rem;
-  color: rgb(29, 28, 30);
+header__content__logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+header__content__hammenu {
   width: 2.4rem;
+  height: 0.4rem;
+  background: black;
+  position: relative;
+}
+header__content__hammenu::before {
+  width: 2.4rem;
+  height: 0.4rem;
+  background: black;
+  position: absolute;
+  top: -0.8px;
+  content: ".";
+}
+header__content__hammenu::before {
+  width: 2.4rem;
+  height: 0.4rem;
+  background: black;
+  position: absolute;
+  top: -0.8px;
+  content: ".";
+}
+
+nav {
+  display: none;
 }/*# sourceMappingURL=nav.css.map */
