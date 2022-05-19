@@ -4,44 +4,124 @@
 
 
 body{
-    background-color: aqua;
+    height: 100vh;
+    @media screen and(min-width: 375px) {
+        background: green;
+    }
+    @media screen and(min-width: 768px) {
+        background: red;
+    }
+    @media screen and(min-width: 1440px) {
+        background: aqua;
+    }
 }
 
 header{
-    height: 9.6rem;
     background-color: white;
-    display: flex;
-    align-items: center;
-    &__content{
-        width: 32.5rem;
-        height: 2.7rem;
-        &__logo{
-            align-self: flex-start;
-        }
-        &__hammenu{
-            width: 2.4rem;
-            height: 0.4rem;
-            background: black;
-            position: relative;
-            }
-        &__hammenu::before{
-            width: 2.4rem;
-            height: 0.4rem;
-            background: black;
-            position: absolute;
-            top: -0.8px;
-            content: ".";
-            }
-        &__hammenu::before{
-            width: 2.4rem;
-            height: 0.4rem;
-            background: black;
-            position: absolute;
-            top: -0.8px;
-            content: ".";
+    .navbar{
+        width: 100%;
+        min-height: 9.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2.4rem;
+        .nav-menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4.2rem;
+            .nav-item{
+                @media screen and(min-width:375px) and(max-width:700px) {
+                    margin: 1.6rem 0;
+                }
+                a,
+                a:link,
+                a:visited{
+                    @media screen and(min-width:375px) and(max-width:700px) {
+                        color: white; // change the color
+                    }
+                    color: black; // change into white after
+                    font-family: Jost;
+                    font-size: 18px;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+                .nav-link{
+                    transition: 0.5s ease;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: red; // change color after test
+                        bottom: -2px;
+                        left: 0;
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        transition: transform 0.25s linear;
+                        content: "";
+                    }
+                    
+                    &:hover::after{
+                        transform-origin: center;
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
     }
-    nav{
+    .hamburger{
+        @media screen and(min-width:375px) and(max-width:700px) {
+            display: block;
+        }
         display: none;
+        cursor: pointer;
+        .bar{
+            display: block;
+            width: 2.4rem;
+            height: 0.4rem;
+            margin: 0.4rem auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background: black;
+        }
     }
+}
+.hamburger.active .bar:nth-child(2){
+    @media screen and(min-width:375px) and(max-width:700px) {
+        opacity: 0;
+    }
+}
+
+.hamburger.active .bar:nth-child(1){
+    @media screen and(min-width:375px) and(max-width:700px) {
+        transform: translateY(8px) rotate(45deg);
+    }
+}
+
+.hamburger.active .bar:nth-child(3){
+    @media screen and(min-width:375px) and(max-width:700px) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.nav-menu.active{
+    @media screen and(min-width:375px) and(max-width:700px) {
+        left: 0;
+    }
+}
+
+.nav-menu{
+    @media screen and(min-width:375px) and(max-width:700px) {
+        position: fixed;
+        left:-100%;
+        top: 96px;
+        gap: 0;
+        flex-direction: column;
+        justify-content: left;
+        background: $bg-dark; //changer le bg 
+        width: 100%;
+        transition: 0.3s;
+    }
+}
