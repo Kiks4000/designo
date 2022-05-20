@@ -18,6 +18,10 @@ a:link {
   text-decoration: none;
 }
 
+body {
+  margin: auto;
+}
+
 .aboutus {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,25 +30,48 @@ a:link {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .aboutus {
+    margin: 0 auto 8.4em auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .aboutus--imgmobile {
     width: 37.5em;
     height: 32em;
   }
-  .aboutus--imgtablet {
+  .aboutus--imgtablet, .aboutus--imgdesktop {
     display: none;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1440px) {
-  .aboutus--imgmobile {
+  .aboutus--imgmobile, .aboutus--imgdesktop {
     display: none;
   }
   .aboutus--imgtablet {
     width: 68.9em;
     height: 32em;
-    border-radius: 5px 5px 0 0;
+    border-radius: 1.5em 1.5em 0 0;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aboutus {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto 160px 0;
+  }
+  .aboutus--imgmobile, .aboutus--imgtablet {
+    display: none;
   }
 }
 .aboutus__content {
@@ -66,6 +93,14 @@ a:link {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
+@media screen and (min-width: 1440px) {
+  .aboutus__content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 82px 0 95px;
+  }
+}
 .aboutus__content h2 {
   font-family: "Jost";
   font-style: normal;
@@ -75,6 +110,12 @@ a:link {
   text-align: center;
   color: #ffffff;
   margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .aboutus__content h2 {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
 }
 .aboutus__content p {
   font-family: "Jost";
@@ -86,9 +127,79 @@ a:link {
   color: #ffffff;
   margin: 0 24px;
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .aboutus__content p {
+    font-size: 16px;
+    margin: 0 58px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aboutus__content p {
+    text-align: left;
+    margin: 0;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .aboutus__content {
+    background-image: url("../../Ressources/images/bg_div_about_tab.png");
+    width: 68.9em;
+    margin: 0 auto;
+    border-radius: 0 0 1.5em 1.5em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .aboutus__content {
+    background-image: url("../../Ressources/images/bg_about_desktop.png");
+    width: 64em;
+    height: 48em;
+    margin: 0;
+  }
+}
 
 .worldclass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .worldclass--imgtablet, .worldclass--imgdesktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .worldclass--imgmobile, .worldclass--imgdesktop {
+    display: none;
+  }
+  .worldclass--imgtablet {
+    width: 68.9em;
+    height: 32em;
+    border-radius: 1.5em 1.5em 0 0;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .worldclass {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto 160px auto;
+  }
+  .worldclass--imgmobile, .worldclass--imgtablet {
+    display: none;
+  }
 }
 .worldclass__content {
   height: 545px;
@@ -109,25 +220,64 @@ a:link {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .worldclass__content {
+    background-image: url("../../Ressources/images/bg_worldclass_tab.png");
+    width: 68.9em;
+    height: 41.6em;
+    margin: 0 auto;
+    border-radius: 0 0 1.5em 1.5em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .worldclass__content {
+    background-image: url("../../Ressources/images/bg_worldclass_desktop.png");
+    width: 63.5em;
+    height: 64em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 82px 0 95px;
+    background-position: 100% 0;
+    border-radius: 0 1.5em 1.5em 0;
+  }
+}
 .worldclass__content h2 {
   font-family: "Jost";
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 3.2em;
   text-align: center;
   color: #e7816b;
   margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .worldclass__content h2 {
+    font-size: 4em;
+    line-height: 1.3;
+  }
 }
 .worldclass__content--p1 {
   font-family: "Jost";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 25px;
   text-align: center;
   color: #333136;
   margin: 0 24px 20px 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .worldclass__content--p1 {
+    margin: 0 58px 20px 58px;
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .worldclass__content--p1 {
+    margin: 0 0 20px 0;
+    text-align: left;
+    font-size: 1.6em;
+  }
 }
 .worldclass__content--p2 {
   font-family: "Jost";
@@ -138,6 +288,19 @@ a:link {
   text-align: center;
   color: #333136;
   margin: 0 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .worldclass__content--p2 {
+    margin: 0 58px;
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .worldclass__content--p2 {
+    text-align: left;
+    margin: 0;
+    font-size: 1.6em;
+  }
 }
 
 .locations {
@@ -237,4 +400,17 @@ a:link {
   text-transform: uppercase;
   color: white;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .realdeal_reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.realdeal_border {
+  border-radius: 1.5em 0 0 1.5em;
 }/*# sourceMappingURL=about.css.map */
