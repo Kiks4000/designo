@@ -28,17 +28,17 @@ header{
         .nav-menu{
             display: flex;
             justify-content: space-between;
-            align-items: center;
             gap: 4.2rem;
             .nav-item{
                 @media screen and(min-width:375px) and(max-width:700px) {
-                    margin: 1.6rem 0;
+                    margin-bottom: 0.1rem;
                 }
                 a,
                 a:link,
                 a:visited{
                     @media screen and(min-width:375px) and(max-width:700px) {
                         color: white; // change the color
+                        font-size: 24px;
                     }
                     color: black; // change into white after
                     font-family: Jost;
@@ -51,11 +51,14 @@ header{
                     transition: 0.5s ease;
                     position: relative;
                     &::after{
+                        @media screen and(min-width:375px) and(max-width:700px) {
+                            background-color: white;
+                        }
                         position: absolute;
                         width: 100%;
-                        height: 2px;
-                        background-color: red; // change color after test
-                        bottom: -2px;
+                        height: 1px;
+                        background-color: black; // change color after test
+                        bottom: -1px;
                         left: 0;
                         transform: scaleX(0);
                         transform-origin: center;
@@ -88,6 +91,9 @@ header{
         }
     }
 }
+
+/*< ----- Animations JS ----- >*/
+
 .hamburger.active .bar:nth-child(2){
     @media screen and(min-width:375px) and(max-width:700px) {
         opacity: 0;
@@ -119,9 +125,10 @@ header{
         top: 96px;
         gap: 0;
         flex-direction: column;
-        justify-content: left;
         background: $bg-dark; //changer le bg 
         width: 100%;
         transition: 0.3s;
+        min-height: 23.5rem;
+        padding: 4.5rem 2.4rem;
     }
 }
