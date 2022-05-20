@@ -39,6 +39,7 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 4rem;
 }
 .main__belgium {
   width: 37.5rem;
@@ -73,9 +74,17 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
+  background: url(../../Ressources/images/bg_worldclass.png);
 }
 .main__belgium__text h2 {
   margin-bottom: 2.4rem;
+  color: #E7816B;
+  font-family: Jost;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
 }
 .main__belgium__text h3 {
   font-family: "Jost";
@@ -119,6 +128,42 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 39.4rem;
+  text-align: center;
+  gap: 2.4rem;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  background: url(../../Ressources/images/bg_worldclass.png);
+}
+.main__australia__text h2 {
+  margin-bottom: 2.4rem;
+  color: #E7816B;
+  font-family: Jost;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.main__australia__text h3 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+.main__australia__text a,
+.main__australia__text a:link,
+.main__australia__text a:visited {
+  color: black;
+}
+.main__australia__location {
+  width: 37.5rem;
+  height: 32rem;
+  background: url(../../Ressources/images/belgium-mobile.png);
 }
 .main__uk {
   max-width: 37.5rem;
@@ -145,4 +190,41 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 39.4rem;
+  text-align: center;
+  gap: 2.4rem;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  background: url(../../Ressources/images/bg_worldclass.png);
+  margin-bottom: 12rem;
+}
+.main__uk__text h2 {
+  margin-bottom: 2.4rem;
+  color: #E7816B;
+  font-family: Jost;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.main__uk__text h3 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+.main__uk__text a,
+.main__uk__text a:link,
+.main__uk__text a:visited {
+  color: black;
+}
+.main__uk__location {
+  width: 37.5rem;
+  height: 32rem;
+  background: url(../../Ressources/images/belgium-mobile.png);
 }/*# sourceMappingURL=location.css.map */

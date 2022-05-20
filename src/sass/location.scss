@@ -5,6 +5,7 @@
 .main{
     display: flex;
     flex-direction: column;
+    gap: 4rem;
     &__belgium{
         width: 37.5rem;
         height: 71.4rem;
@@ -23,8 +24,16 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 26px;
+            background: url(../../Ressources/images/bg_worldclass.png);
             h2{
                 margin-bottom: 2.4rem;
+                color: #E7816B;
+                font-family: Jost;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 36px;
+                letter-spacing: 0px;
+                text-align: center;
             }
             h3{
                 font-family: 'Jost';
@@ -55,6 +64,42 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 39.4rem;
+            text-align: center;
+            gap: 2.4rem;
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            background: url(../../Ressources/images/bg_worldclass.png);
+            h2{
+                margin-bottom: 2.4rem;
+                color: #E7816B;
+                font-family: Jost;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 36px;
+                letter-spacing: 0px;
+                text-align: center;
+            }
+            h3{
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 26px;
+            }
+            a,
+            a:link,
+            a:visited{
+                color: black;
+            }
+        }
+        &__location{
+            width: 37.5rem;
+            height: 32rem;
+            background: url(../../Ressources/images/belgium-mobile.png);
         }
     }
     &__uk{
@@ -67,6 +112,43 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 39.4rem;
+            text-align: center;
+            gap: 2.4rem;
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            background: url(../../Ressources/images/bg_worldclass.png);
+            margin-bottom: 12rem;
+            h2{
+                margin-bottom: 2.4rem;
+                color: #E7816B;
+                font-family: Jost;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 36px;
+                letter-spacing: 0px;
+                text-align: center;
+            }
+            h3{
+                font-family: 'Jost';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 26px;
+            }
+            a,
+            a:link,
+            a:visited{
+                color: black;
+            }
+        }
+        &__location{
+            width: 37.5rem;
+            height: 32rem;
+            background: url(../../Ressources/images/belgium-mobile.png);
         }
     }
 }
