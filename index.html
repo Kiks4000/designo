@@ -16,20 +16,39 @@
     ></script>
     <script>
       $(function () {
-        $("#inclusion").load("src/footer.html");
+        $("#inclusion_footer").load("src/footer.html");
       });
     </script>
     <!--Insertion footer-->
+    <link rel="stylesheet" href="src/css/nav.css" />
     <link rel="stylesheet" href="src/css/home.min.css" />
     <title>Home</title>
   </head>
   <body>
     <header>
-      <!--Header-->
+      <nav class="navbar">
+        <a href="#"
+          ><img src="Ressources/images/anewlogo.svg" alt="designo logo"
+        /></a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">our compagny</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">location</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
-    <nav>
-      <!--nav-->
-    </nav>
     <main>
       <article class="headarticle">
         <div class="headarticle__text">
@@ -48,12 +67,12 @@
             class="headarticle__image--mobile"
           />
           <img
-            src="Ressources/images/Group-5-3.png"
+            src="Ressources/images/smart_tablet.png"
             alt="images d'un smartphone"
             class="headarticle__image--tablet"
           />
           <img
-            src="Ressources/images/Group-5-3.png"
+            src="Ressources/images/smartphone_desktop.png"
             alt="images d'un smartphone"
             class="headarticle__image--desktop"
           />
@@ -186,7 +205,8 @@
       <!-- Section Human end-->
     </main>
     <footer>
-      <div id="inclusion"></div>
+      <div id="inclusion_footer"></div>
     </footer>
+    <script src="./src/sass/global/main.js"></script>
   </body>
 </html>

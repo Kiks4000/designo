@@ -16,20 +16,39 @@
     ></script>
     <script>
       $(function () {
-        $("#inclusion").load("src/footer.html");
+        $("#inclusion_footer").load("src/footer.html");
       });
     </script>
     <!--Insertion footer-->
     <link rel="stylesheet" href="src/css/about.min.css" />
+    <link rel="stylesheet" href="src/css/nav.css" />
     <title>About</title>
   </head>
   <body>
     <header>
-      <!--Header-->
+      <nav class="navbar">
+        <a href="#"
+          ><img src="Ressources/images/anewlogo.svg" alt="designo logo"
+        /></a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">our compagny</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">location</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </header>
-    <nav>
-      <!--nav-->
-    </nav>
     <main>
       <article class="aboutus">
         <img
@@ -146,7 +165,8 @@
       </article>
     </main>
     <footer>
-      <div id="inclusion"></div>
+      <div id="inclusion_footer"></div>
     </footer>
+    <script src="./src/sass/global/main.js"></script>
   </body>
 </html>
