@@ -31,6 +31,10 @@ a:link {
     text-align: center;
 
 Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et juste copier coller le reste ou vous en avez besoin :p*/
+body {
+  margin: 0 auto;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,6 +44,7 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4rem;
+  margin: 0 auto;
 }
 .main__belgium {
   width: 37.5rem;
@@ -51,6 +56,14 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .main__belgium {
+    width: 68.9rem;
+    height: 68.3rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .main__belgium__text {
   display: -webkit-box;
@@ -76,10 +89,18 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   line-height: 26px;
   background: url(../../Ressources/images/bg_worldclass.png);
 }
-.main__belgium__text h2 {
+@media screen and (min-width: 768px) {
+  .main__belgium__text {
+    background: url(../../Ressources/images/bg_worldclass_tab.png);
+    border-radius: 1.5rem;
+    width: 68.9rem;
+    margin-bottom: 8rem;
+  }
+}
+.main__belgium__text__title h2 {
   margin-bottom: 2.4rem;
   color: #E7816B;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 32px;
   font-weight: 500;
   line-height: 36px;
@@ -103,9 +124,18 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   height: 32rem;
   background: url(../../Ressources/images/belgium-mobile.png);
 }
+@media screen and (min-width: 768px) {
+  .main__belgium__location {
+    width: 68.9rem;
+    height: 32.6rem;
+    background: url(../../Ressources/images/belgium-tablet.png);
+    border-radius: 15px;
+    margin-bottom: 2.2rem;
+  }
+}
 .main__australia {
-  max-width: 37.5rem;
-  max-height: 71.4rem;
+  width: 37.5rem;
+  height: 71.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,6 +143,14 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .main__australia {
+    width: 68.9rem;
+    height: 68.3rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .main__australia__text {
   display: -webkit-box;
@@ -138,10 +176,18 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   line-height: 26px;
   background: url(../../Ressources/images/bg_worldclass.png);
 }
-.main__australia__text h2 {
+@media screen and (min-width: 768px) {
+  .main__australia__text {
+    background: url(../../Ressources/images/bg_worldclass_tab.png);
+    border-radius: 1.5rem;
+    width: 68.9rem;
+    margin-bottom: 8rem;
+  }
+}
+.main__australia__text__title h2 {
   margin-bottom: 2.4rem;
   color: #E7816B;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 32px;
   font-weight: 500;
   line-height: 36px;
@@ -163,11 +209,20 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
 .main__australia__location {
   width: 37.5rem;
   height: 32rem;
-  background: url(../../Ressources/images/belgium-mobile.png);
+  background: url(../../Ressources/images/autralia-mobile.png);
+}
+@media screen and (min-width: 768px) {
+  .main__australia__location {
+    width: 68.9rem;
+    height: 32.6rem;
+    background: url(../../Ressources/images/australia-tablet.png);
+    border-radius: 15px;
+    margin-bottom: 2.2rem;
+  }
 }
 .main__uk {
-  max-width: 37.5rem;
-  max-height: 71.4rem;
+  width: 37.5rem;
+  height: 71.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,6 +230,14 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .main__uk {
+    width: 68.9rem;
+    height: 68.3rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .main__uk__text {
   display: -webkit-box;
@@ -199,12 +262,19 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
   font-size: 16px;
   line-height: 26px;
   background: url(../../Ressources/images/bg_worldclass.png);
-  margin-bottom: 12rem;
 }
-.main__uk__text h2 {
+@media screen and (min-width: 768px) {
+  .main__uk__text {
+    background: url(../../Ressources/images/bg_worldclass_tab.png);
+    border-radius: 1.5rem;
+    width: 68.9rem;
+    margin-bottom: 8rem;
+  }
+}
+.main__uk__text__title h2 {
   margin-bottom: 2.4rem;
   color: #E7816B;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 32px;
   font-weight: 500;
   line-height: 36px;
@@ -226,5 +296,14 @@ Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et j
 .main__uk__location {
   width: 37.5rem;
   height: 32rem;
-  background: url(../../Ressources/images/belgium-mobile.png);
+  background: url(../../Ressources/images/uk-mobile.png);
+}
+@media screen and (min-width: 768px) {
+  .main__uk__location {
+    width: 68.9rem;
+    height: 32.6rem;
+    background: url(../../Ressources/images/uk-tablet.png);
+    border-radius: 15px;
+    margin-bottom: 2.2rem;
+  }
 }/*# sourceMappingURL=location.css.map */
