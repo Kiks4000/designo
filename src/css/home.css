@@ -19,23 +19,54 @@ a:link {
 }
 
 .headarticle {
-  width: 37.5rem;
-  height: 84.3rem;
+  width: 37.5em;
+  height: 84.3em;
   background-image: url("../../Ressources/images/bg_head_home.png");
   background-repeat: no-repeat;
   margin-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .headarticle {
-    width: 68.9rem;
+    width: 68.9em;
     background-image: url("../../Ressources/images/bg_head_home_tab.png");
     background-repeat: no-repeat;
     margin: 0 39px 120px 39px;
   }
 }
 .headarticle__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  margin-bottom: 80px;
+  height: 472px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .headarticle__text {
+    height: 455px;
+  }
 }
 .headarticle__text h1 {
   font-family: "Jost";
@@ -44,11 +75,22 @@ a:link {
   font-size: 32px;
   line-height: 36px;
   text-align: center;
-  padding-top: 8rem;
-  margin: 2.4rem 1.4rem 2.4rem;
-  font-size: 3.2rem;
+  margin: 0 24px 14px 24px;
+  font-size: 3.2em;
   color: white;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .headarticle__text h1 {
+    margin: 0 58px 8px 58px;
+    font-size: 48px;
+    line-height: 48px;
+  }
 }
 .headarticle__text p {
   font-family: "Jost";
@@ -58,7 +100,20 @@ a:link {
   line-height: 25px;
   text-align: center;
   color: white;
-  margin: 2.4rem;
+  margin: 0 24px 24px 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .headarticle__text p {
+    margin: 0 127px 19px 117px;
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 .headarticle__text a,
 .headarticle__text a:link,
@@ -100,7 +155,37 @@ a:link {
     vertical-align: bottom;
     text-align: center;
   }
-  .headarticle__image--mobile--tablet .headarticle__image--mobile--desktop {
+  .headarticle__image--tablet, .headarticle__image--desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .headarticle__image--tablet {
+    width: 279px;
+    margin: 0 auto;
+  }
+  .headarticle__image--tablet img {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+    text-align: center;
+  }
+  .headarticle__image--mobile, .headarticle__image--desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .headarticle__image--desktop {
+    width: 279px;
+    margin: 0 auto;
+  }
+  .headarticle__image--desktop img {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+    text-align: center;
+  }
+  .headarticle__image--tablet, .headarticle__image--mobile {
     display: none;
   }
 }
@@ -168,6 +253,9 @@ a:link {
   height: 8px;
   width: 4px;
   margin-left: 21px;
+}
+.blackcard__content a :hover {
+  color: aqua;
 }
 @media screen and (max-width: 768px) {
   .blackcard--tablet {
