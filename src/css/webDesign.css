@@ -12,6 +12,7 @@
 
 Il faudra réadapter les degrés en fonction de chaque "bulle" de vos pages et juste copier coller le reste ou vous en avez besoin :p*/
 /* < ----- Reset CSS ----- > */
+@import url(../css/nav.css);
 * {
   margin: 0;
   padding: 0;
@@ -5774,6 +5775,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 .banner .bubble {
   background: linear-gradient(11deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
@@ -5805,7 +5808,6 @@ body {
   font-size: 1.5rem;
   line-height: 1.6;
 }
-
 .container-design {
   max-width: 1110px;
   margin: auto;
@@ -5827,16 +5829,13 @@ body {
 .container-design .p-builder,
 .container-design .p-blogr,
 .container-design .p-camp {
-  -o-object-fit: contain;
-     object-fit: contain;
+  display: block;
   width: 100%;
-  height: 65%;
 }
 .container-design .box {
   background-color: rgb(253, 243, 240);
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1rem;
-  height: 30%;
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -5849,10 +5848,10 @@ body {
 .container-design .box .text-box {
   color: rgb(51, 49, 54);
   padding-top: 2rem;
-  padding-bottom: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   font-size: 1.6rem;
+  font-weight: 400;
   text-transform: block;
   letter-spacing: normal;
   text-transform: none;
@@ -5881,7 +5880,8 @@ body {
   gap: 3rem;
 }
 .blackcard img {
-  border-radius: 5%;
+  border-radius: 2rem;
+  display: inline-block;
 }
 @media screen and (max-width: 768px) {
   .blackcard img {
