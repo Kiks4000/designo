@@ -35,13 +35,27 @@ header .navbar {
           align-items: center;
   padding: 0 2.4rem;
 }
+@media screen and (min-width: 768px) {
+  header .navbar {
+    max-width: 68.9rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header .navbar {
+    max-width: 111.1rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
 header .navbar .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   gap: 4.2rem;
 }
 @media screen and (min-width: 375px) and (max-width: 700px) {
