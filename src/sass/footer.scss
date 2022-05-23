@@ -190,13 +190,15 @@ footer{
                 margin-bottom: 4rem;
             }
             .footer__lower-container__logo{
-                @media screen and(min-width:768px) {
-                    margin-bottom: 0;
+                a{
+                    @media screen and(min-width:768px) {
+                        margin-bottom: 0;
+                    }
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.7rem;
+                    margin-bottom: 3.2rem;
                 }
-                display: flex;
-                justify-content: center;
-                gap: 1.7rem;
-                margin-bottom: 3.2rem;
             }
             .footer__hr{
                 @media screen and(min-width:768px) {
@@ -231,6 +233,24 @@ footer{
                             font-weight: 400;
                             line-height: 14px;
                             letter-spacing: 2px;
+                            transition: ease 0.5s;
+                            position: relative;
+                            &::after{
+                                position: absolute;
+                                width: 100%;
+                                height: 1px;
+                                background-color: white; // change color after test
+                                bottom: -1px;
+                                left: 0;
+                                transform: scaleX(0);
+                                transform-origin: center;
+                                transition: transform 0.25s linear;
+                                content: "";
+                            }
+                            &:hover::after{
+                                transform-origin: center;
+                                transform: scaleX(1);
+                            }
                         }
                     }
                 }
@@ -367,6 +387,9 @@ footer{
                     a:visited{
                         color: #E7816B;
                         font-size: 2.4rem;
+                        &:hover{
+                            color: #FFAD9B;
+                        }
                     }
                 }
             }

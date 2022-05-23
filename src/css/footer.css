@@ -309,7 +309,7 @@ footer .footer__lower-container {
     margin-bottom: 4rem;
   }
 }
-footer .footer__lower-container .footer__lower-container__tablet-container .footer__lower-container__logo {
+footer .footer__lower-container .footer__lower-container__tablet-container .footer__lower-container__logo a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,7 +320,7 @@ footer .footer__lower-container .footer__lower-container__tablet-container .foot
   margin-bottom: 3.2rem;
 }
 @media screen and (min-width: 768px) {
-  footer .footer__lower-container .footer__lower-container__tablet-container .footer__lower-container__logo {
+  footer .footer__lower-container .footer__lower-container__tablet-container .footer__lower-container__logo a {
     margin-bottom: 0;
   }
 }
@@ -374,6 +374,32 @@ footer .footer__lower-container .footer__lower-container__tablet-container .foot
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 2px;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+  position: relative;
+}
+footer .footer__lower-container .footer__lower-container__tablet-container .footer__nav .footer__nav__links li a::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  bottom: -1px;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.25s linear;
+  transition: -webkit-transform 0.25s linear;
+  transition: transform 0.25s linear;
+  transition: transform 0.25s linear, -webkit-transform 0.25s linear;
+  content: "";
+}
+footer .footer__lower-container .footer__lower-container__tablet-container .footer__nav .footer__nav__links li a:hover::after {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 footer .footer__lower-container .footer__hr-tablet {
   display: none;
@@ -552,4 +578,9 @@ footer .footer__lower-container .footer__lower-container__tablet-container-two .
 footer .footer__lower-container .footer__lower-container__tablet-container-two .footer__social .footer__social__list a:visited {
   color: #E7816B;
   font-size: 2.4rem;
+}
+footer .footer__lower-container .footer__lower-container__tablet-container-two .footer__social .footer__social__list a:hover,
+footer .footer__lower-container .footer__lower-container__tablet-container-two .footer__social .footer__social__list a:link:hover,
+footer .footer__lower-container .footer__lower-container__tablet-container-two .footer__social .footer__social__list a:visited:hover {
+  color: #FFAD9B;
 }/*# sourceMappingURL=footer.css.map */
