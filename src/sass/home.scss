@@ -22,19 +22,21 @@
     height: 640px;
     background-image: url("../../Ressources/images/bg_head_home_desktop.png");
     background-repeat: no-repeat;
-    margin: 0 auto;
+    margin: 0 auto 160px auto;
     flex-direction: row;
   }
   &__text {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 472px;
+    justify-content: flex-end;
+    height: 360px;
     @media screen and(min-width: 768px) and (max-width: 1440px) {
       height: 416px;
     }
     @media screen and(min-width: 1440px) {
       height: 635px;
+      justify-content: center;
     }
     h1 {
       font-family: "Jost";
@@ -112,9 +114,10 @@
   }
   &__image {
     @media screen and(max-width: 768px) {
+      width: 316px;
+      height: 371px;
+      margin: 0 auto;
       &--mobile {
-        width: 279px;
-        margin: 0 auto;
         img {
           width: 100%;
           height: 100%;
@@ -129,7 +132,7 @@
     }
     @media screen and(min-width: 768px) and(max-width: 1440px) {
       &--tablet {
-        width: 364px;
+        width: 366px;
         margin: 0 auto;
         img {
           width: 100%;
@@ -146,6 +149,7 @@
     @media screen and(min-width: 1440px) {
       &--desktop {
         width: 476px;
+        height: 642px;
         margin: 0 auto;
         img {
           vertical-align: bottom;
@@ -160,6 +164,36 @@
   }
 }
 
+// BLACKCARDS
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  @media screen and(min-width: 768px) and(max-width: 1440px) {
+    margin: 0 auto 96px auto;
+  }
+  @media screen and(min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 1111px;
+    margin: 0 auto 150px auto;
+    &--item1 {
+      grid-area: 1 / 1 / 3 / 2;
+      width: 541px;
+      height: 640px;
+      div {
+        img {
+          height: 640px;
+        }
+      }
+    }
+  }
+}
 .blackcard {
   height: 100%;
   width: 100%;
@@ -265,6 +299,11 @@
   width: 100%;
   text-align: center;
   margin-bottom: 121px;
+  @media screen and(min-width: 1440px) {
+    flex-direction: row;
+    margin: 0 auto 160px auto;
+    width: 1111px;
+  }
   &__container {
     margin: 0 24px;
     @media screen and(min-width: 768px) and (max-width: 1440px) {

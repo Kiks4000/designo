@@ -1,0 +1,203 @@
+@import "../../Ressources/_reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
+
+.contact {
+  height: 764px;
+  width: 100%;
+  background-image: url("/Ressources/images/bg_contact_mobile.png");
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @media screen and(min-width: 768px) and (max-width: 1440px) {
+    background-image: url("/Ressources/images/bg_contact_tablet.png");
+    width: 689px;
+  }
+  @media screen and(min-width: 1440px) {
+    background-image: url("/Ressources/images/bg_contact_desktop.png");
+    width: 1111px;
+    flex-direction: row;
+  }
+  &__explain {
+    margin: 0 auto;
+  }
+  h2 {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 auto 24px auto;
+    padding-top: 72px;
+    @media screen and(min-width: 768px) and (max-width: 1440px) {
+      text-align: left;
+    }
+  }
+
+  p {
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 24px 48px 24px;
+    @media screen and(min-width: 768px) and (max-width: 1440px) {
+      text-align: left;
+      width: 573px;
+      margin: 0;
+    }
+  }
+  &__form {
+    width: 90%;
+    margin: 0 auto;
+    form {
+      div {
+        width: 327px;
+        background-color: none;
+        margin-bottom: 20px;
+        @media screen and(min-width: 768px) and (max-width: 1440px) {
+          width: 100%;
+        }
+        input {
+          background-color: transparent;
+          border: 0;
+          height: 27px;
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          color: #ffffff;
+          mix-blend-mode: normal;
+          opacity: 0.5;
+          margin: 11px 0 14px 11px;
+          width: 90%;
+          border-bottom: 1px white solid;
+        }
+
+        textarea {
+          background-color: transparent;
+          border: 0;
+          height: 76px;
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          color: #ffffff;
+          mix-blend-mode: normal;
+          opacity: 0.5;
+          margin: 11px 0 14px 0;
+          width: 100%;
+          text-align: left;
+          border-bottom: 1px white solid;
+        }
+        .button {
+          position: relative;
+          height: 56px;
+          width: 152px;
+          border-radius: 8px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          font-family: Jost;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 22px;
+          letter-spacing: 1px;
+          text-align: left;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: black;
+          margin: 0 auto;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.locations {
+  margin: 12px auto;
+  width: 100%;
+  text-align: center;
+  ul {
+    @media screen and(min-width: 1440px) {
+      display: flex;
+      justify-content: center;
+      gap: 178px;
+    }
+    li {
+      margin-bottom: 48px;
+      @media screen and(min-width: 768px) and (max-width: 1440px) {
+        margin-bottom: 80px;
+      }
+      @media screen and(min-width: 1440px) {
+        margin-bottom: 160px;
+      }
+      img {
+        margin-bottom: 48px;
+      }
+      h3 {
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 5px;
+        margin-bottom: 32px;
+      }
+      a,
+      a:link,
+      a:visited {
+        position: relative;
+        height: 56px;
+        width: 152px;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e7816b;
+        font-family: Jost;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 1px;
+        text-align: left;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: white;
+        margin: 0 auto;
+      }
+      a:hover {
+        position: relative;
+        height: 56px;
+        width: 152px;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffad9b;
+        font-family: Jost;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 1px;
+        text-align: left;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: white;
+        margin: 0 auto;
+      }
+    }
+  }
+}
