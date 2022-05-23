@@ -5785,8 +5785,6 @@ body {
   position: absolute;
   left: 7rem;
   top: 0.5rem;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
 }
 .banner .semi-bubble {
   background: linear-gradient(80deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
