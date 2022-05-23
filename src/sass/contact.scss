@@ -1,4 +1,4 @@
-@import "../../Ressources/_reset.scss";
+@import "_reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27");
 
 .contact {
@@ -9,17 +9,24 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
   @media screen and(min-width: 768px) and (max-width: 1440px) {
     background-image: url("/Ressources/images/bg_contact_tablet.png");
     width: 689px;
+    height: 711px;
   }
   @media screen and(min-width: 1440px) {
     background-image: url("/Ressources/images/bg_contact_desktop.png");
     width: 1111px;
+    height: 480px;
     flex-direction: row;
+    align-items: center;
   }
   &__explain {
     margin: 0 auto;
+    @media screen and(min-width: 1440px) {
+      text-align: left;
+    }
   }
   h2 {
     font-family: "Jost";
@@ -33,6 +40,14 @@
     padding-top: 72px;
     @media screen and(min-width: 768px) and (max-width: 1440px) {
       text-align: left;
+      font-size: 48px;
+    }
+    @media screen and(min-width: 1440px) {
+      font-size: 48px;
+      text-align: left;
+      margin-left: 95px;
+      margin-bottom: 32px;
+      padding-top: 0px;
     }
   }
 
@@ -48,19 +63,44 @@
     @media screen and(min-width: 768px) and (max-width: 1440px) {
       text-align: left;
       width: 573px;
-      margin: 0;
+      margin: 0 0 40px 0;
+      font-size: 16px;
+    }
+    @media screen and(min-width: 1440px) {
+      font-size: 16px;
+      text-align: left;
+      width: 445px;
+      margin: auto 95px;
     }
   }
   &__form {
-    width: 90%;
-    margin: 0 auto;
+    width: 476px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    @media screen and(min-width: 768px) and (max-width: 1440px) {
+      width: 573px;
+      height: 371px;
+      margin: 0 auto;
+    }
+    @media screen and(max-width: 768px) {
+      width: 327px;
+      height: 764px;
+      margin: 0 auto;
+    }
     form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
       div {
         width: 327px;
         background-color: none;
         margin-bottom: 20px;
         @media screen and(min-width: 768px) and (max-width: 1440px) {
           width: 100%;
+        }
+        @media screen and(min-width: 1440px) {
+          width: 380px;
+          margin-bottom: 0px;
         }
         input {
           background-color: transparent;
@@ -74,15 +114,29 @@
           color: #ffffff;
           mix-blend-mode: normal;
           opacity: 0.5;
-          margin: 11px 0 14px 11px;
-          width: 90%;
+          margin-bottom: 25px;
+          width: 380px;
+          height: 38px;
           border-bottom: 1px white solid;
+          padding-left: 16px;
+          @media screen and(min-width: 768px) and (max-width: 1440px) {
+            width: 573px;
+            padding-left: 24px;
+            height: 46px;
+            margin-bottom: 0px;
+          }
+          @media screen and(max-width: 768px) {
+            width: 327px;
+            padding-left: 13px;
+            height: 46px;
+            margin-bottom: 0px;
+          }
         }
 
         textarea {
           background-color: transparent;
           border: 0;
-          height: 76px;
+          height: 96px;
           font-family: "Jost";
           font-style: normal;
           font-weight: 500;
@@ -95,6 +149,14 @@
           width: 100%;
           text-align: left;
           border-bottom: 1px white solid;
+          padding-left: 16px;
+          resize: none;
+          @media screen and(min-width: 768px) and (max-width: 1440px) {
+            height: 102px;
+          }
+          @media screen and(min-width: 1440px) {
+            height: 102px;
+          }
         }
         .button {
           position: relative;
@@ -117,6 +179,25 @@
           color: black;
           margin: 0 auto;
           opacity: 1;
+          padding-left: 0;
+        }
+        .button:hover {
+          background-color: #ffad9b;
+          color: white;
+        }
+      }
+      @media screen and(min-width: 1440px) {
+        div:nth-child(5n) {
+          position: absolute;
+          top: 314px;
+          left: 114px;
+        }
+      }
+      @media screen and(min-width: 768px) and (max-width: 1440px) {
+        div:nth-child(5n) {
+          position: absolute;
+          top: 341px;
+          left: 210px;
         }
       }
     }

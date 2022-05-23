@@ -36,20 +36,30 @@ a:link {
   .contact {
     background-image: url("/Ressources/images/bg_contact_tablet.png");
     width: 689px;
+    height: 711px;
   }
 }
 @media screen and (min-width: 1440px) {
   .contact {
     background-image: url("/Ressources/images/bg_contact_desktop.png");
     width: 1111px;
+    height: 480px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .contact__explain {
   margin: 0 auto;
+}
+@media screen and (min-width: 1440px) {
+  .contact__explain {
+    text-align: left;
+  }
 }
 .contact h2 {
   font-family: "Jost";
@@ -65,6 +75,16 @@ a:link {
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .contact h2 {
     text-align: left;
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact h2 {
+    font-size: 48px;
+    text-align: left;
+    margin-left: 95px;
+    margin-bottom: 32px;
+    padding-top: 0px;
   }
 }
 .contact p {
@@ -81,12 +101,49 @@ a:link {
   .contact p {
     text-align: left;
     width: 573px;
-    margin: 0;
+    margin: 0 0 40px 0;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact p {
+    font-size: 16px;
+    text-align: left;
+    width: 445px;
+    margin: auto 95px;
   }
 }
 .contact__form {
-  width: 90%;
-  margin: 0 auto;
+  width: 476px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .contact__form {
+    width: 573px;
+    height: 371px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__form {
+    width: 327px;
+    height: 764px;
+    margin: 0 auto;
+  }
+}
+.contact__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
 }
 .contact__form form div {
   width: 327px;
@@ -96,6 +153,12 @@ a:link {
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .contact__form form div {
     width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact__form form div {
+    width: 380px;
+    margin-bottom: 0px;
   }
 }
 .contact__form form div input {
@@ -110,14 +173,32 @@ a:link {
   color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.5;
-  margin: 11px 0 14px 11px;
-  width: 90%;
+  margin-bottom: 25px;
+  width: 380px;
+  height: 38px;
   border-bottom: 1px white solid;
+  padding-left: 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .contact__form form div input {
+    width: 573px;
+    padding-left: 24px;
+    height: 46px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact__form form div input {
+    width: 327px;
+    padding-left: 13px;
+    height: 46px;
+    margin-bottom: 0px;
+  }
 }
 .contact__form form div textarea {
   background-color: transparent;
   border: 0;
-  height: 76px;
+  height: 96px;
   font-family: "Jost";
   font-style: normal;
   font-weight: 500;
@@ -130,6 +211,18 @@ a:link {
   width: 100%;
   text-align: left;
   border-bottom: 1px white solid;
+  padding-left: 16px;
+  resize: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .contact__form form div textarea {
+    height: 102px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact__form form div textarea {
+    height: 102px;
+  }
 }
 .contact__form form div .button {
   position: relative;
@@ -158,6 +251,25 @@ a:link {
   color: black;
   margin: 0 auto;
   opacity: 1;
+  padding-left: 0;
+}
+.contact__form form div .button:hover {
+  background-color: #ffad9b;
+  color: white;
+}
+@media screen and (min-width: 1440px) {
+  .contact__form form div:nth-child(5n) {
+    position: absolute;
+    top: 314px;
+    left: 114px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .contact__form form div:nth-child(5n) {
+    position: absolute;
+    top: 341px;
+    left: 210px;
+  }
 }
 
 .locations {
