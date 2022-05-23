@@ -45,6 +45,14 @@ body {
           flex-direction: column;
   gap: 4rem;
   margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    gap: 0;
+  }
 }
 .main__belgium {
   width: 37.5rem;
@@ -56,6 +64,9 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .main__belgium {
@@ -63,6 +74,20 @@ body {
     height: 68.3rem;
     -ms-flex-item-align: center;
         align-self: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__belgium {
+    width: 110rem;
+    height: 32.6rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 3.2rem;
+    gap: 3rem;
   }
 }
 .main__belgium__text {
@@ -95,6 +120,18 @@ body {
     border-radius: 1.5rem;
     width: 68.9rem;
     margin-bottom: 8rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 8.8rem 7.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__belgium__text {
+    width: 110rem;
+    height: 32.6rem;
+    margin-bottom: 0;
+    background: url(../../Ressources/images/bg-desk.png);
   }
 }
 .main__belgium__text__title h2 {
@@ -119,6 +156,15 @@ body {
 .main__belgium__text a:visited {
   color: black;
 }
+@media screen and (min-width: 768px) {
+  .main__belgium__text__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 11.5rem;
+    text-align: left;
+  }
+}
 .main__belgium__location {
   width: 37.5rem;
   height: 32rem;
@@ -131,6 +177,11 @@ body {
     background: url(../../Ressources/images/belgium-tablet.png);
     border-radius: 15px;
     margin-bottom: 2.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__belgium__location {
+    background: url(../../Ressources/images/belgium-desk.png) no-repeat cover;
   }
 }
 .main__australia {
@@ -150,6 +201,20 @@ body {
     height: 68.3rem;
     -ms-flex-item-align: center;
         align-self: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__australia {
+    width: 110rem;
+    height: 32.6rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin-bottom: 3.2rem;
+    gap: 3rem;
   }
 }
 .main__australia__text {
@@ -182,6 +247,18 @@ body {
     border-radius: 1.5rem;
     width: 68.9rem;
     margin-bottom: 8rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 8.8rem 7.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__australia__text {
+    width: 110rem;
+    height: 32.6rem;
+    margin-bottom: 0;
+    background: url(../../Ressources/images/bg-desk.png) no-repeat;
   }
 }
 .main__australia__text__title h2 {
@@ -206,10 +283,19 @@ body {
 .main__australia__text a:visited {
   color: black;
 }
+@media screen and (min-width: 768px) {
+  .main__australia__text__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 11.5rem;
+    text-align: left;
+  }
+}
 .main__australia__location {
   width: 37.5rem;
   height: 32rem;
-  background: url(../../Ressources/images/autralia-mobile.png);
+  background: url(../../Ressources/images/australia-mobile.png);
 }
 @media screen and (min-width: 768px) {
   .main__australia__location {
@@ -218,6 +304,11 @@ body {
     background: url(../../Ressources/images/australia-tablet.png);
     border-radius: 15px;
     margin-bottom: 2.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__australia__location {
+    background: url(../../Ressources/images/autralia-desk.png) no-repeat cover;
   }
 }
 .main__uk {
@@ -237,6 +328,20 @@ body {
     height: 68.3rem;
     -ms-flex-item-align: center;
         align-self: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__uk {
+    width: 110rem;
+    height: 32.6rem;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 3.2rem;
+    gap: 3rem;
   }
 }
 .main__uk__text {
@@ -262,6 +367,7 @@ body {
   font-size: 16px;
   line-height: 26px;
   background: url(../../Ressources/images/bg_worldclass.png);
+  margin-bottom: 12rem;
 }
 @media screen and (min-width: 768px) {
   .main__uk__text {
@@ -269,6 +375,18 @@ body {
     border-radius: 1.5rem;
     width: 68.9rem;
     margin-bottom: 8rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 8.8rem 7.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__uk__text {
+    width: 110rem;
+    height: 32.6rem;
+    margin-bottom: 0;
+    background: url(../../Ressources/images/bg-desk.png);
   }
 }
 .main__uk__text__title h2 {
@@ -293,6 +411,15 @@ body {
 .main__uk__text a:visited {
   color: black;
 }
+@media screen and (min-width: 768px) {
+  .main__uk__text__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 11.5rem;
+    text-align: left;
+  }
+}
 .main__uk__location {
   width: 37.5rem;
   height: 32rem;
@@ -302,8 +429,13 @@ body {
   .main__uk__location {
     width: 68.9rem;
     height: 32.6rem;
-    background: url(../../Ressources/images/uk-tablet.png);
+    background: url(../../Ressources/images/uk-tablet.png) no-repeat cover;
     border-radius: 15px;
     margin-bottom: 2.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main__uk__location {
+    background: url(../../Ressources/images/uk-desk.png) no-repeat cover;
   }
 }/*# sourceMappingURL=location.css.map */
