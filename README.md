@@ -7,3 +7,5 @@
 #### A little sneak peak of the design just below :
 
 ![designo](./Ressources/images/designo-project.png)
+
+final page here : https://kiks4000.github.io/designo/
