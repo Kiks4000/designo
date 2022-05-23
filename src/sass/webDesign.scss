@@ -2,20 +2,29 @@
 @import "./global/mixins";
 @import './global/reset';
 @import './global/grid';
-@import url(../css/nav.css);
+@import "/src/sass/nav.scss";
 
 body {
-    background-color: $bg-color;
     font-family: $font-default;
     font-size: 1.6rem;
     height: 100%;
     width: 100%;
     position: absolute;
     text-align: center;
-
 }
-// Bannière avec les cercles + texte
 
+// Bannière avec les cercles + texte
+@media only screen and (min-width: $mobile) {
+    .back-bubble {
+        margin: 2rem;
+    }
+}
+
+@media only screen and (min-width: $mobile) {
+    .banner {
+        border-radius: 1.5rem;
+    }
+}
 .banner {
     background-color: $color-main;
     color: $color-second;
