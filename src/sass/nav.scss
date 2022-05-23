@@ -4,6 +4,7 @@
 
 header{
     background-color: white;
+    
     .navbar{
         width: 100%;
         min-height: 9.6rem;
@@ -15,11 +16,13 @@ header{
             max-width: 68.9rem;
             padding: 0;
             margin: 0 auto;
+            margin-bottom: 5.9rem;
         }
         @media screen and(min-width:1440px){
             max-width: 111.1rem;
             padding: 0;
             margin: 0 auto;
+            margin-bottom: 5.9rem;
         }
         .nav-menu{
             display: flex;
@@ -113,9 +116,23 @@ header{
     }
 }
 
+.nav-menu.active::after{
+    @media screen and(min-width:375px) and(max-width:700px) {
+        content: "";
+        background-color: rgba(51,49,54,.4549019608);
+        height: 100vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
 .nav-menu{
     @media screen and(min-width:375px) and(max-width:700px) {
         position: fixed;
+        z-index: 2;
         left:-100%;
         top: 96px;
         gap: 0;
