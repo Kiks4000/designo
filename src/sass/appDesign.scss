@@ -1,0 +1,221 @@
+@import "./global/variables";
+@import "./global/mixins";
+@import './global/reset';
+@import './global/grid';
+
+body {
+    background-color: $bg-color;
+    font-family: $font-default;
+    font-size: 1.6rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+
+}
+
+.banner {
+    background-color: $color-main;
+    color: $color-second;
+    height: 32rem;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    .bubble {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 11deg);
+        width: 30rem;
+        height: 29rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 7rem;
+        top: 0.5rem;
+        filter: grayscale(1);
+    }
+
+    .semi-bubble {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 80deg);
+        width: 30rem;
+        height: 29rem;
+        border-radius: 50%;
+        position: absolute;
+        left: -25rem;
+        top: 0.5rem;
+
+    }
+
+    &__title {
+        font-weight: 500;
+        position: relative;
+        letter-spacing: 0.2rem;
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        position: relative;
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+}
+
+
+
+
+
+.container-design {
+    max-width: 1110px;
+    margin: auto;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+    .p-airfilter,
+    .p-eyecam,
+    .p-faceit,
+    .p-todo,
+    .p-loopstudios {
+        display: block;
+        width: 100%;
+
+    }
+
+    .box {
+        background-color: $color-box;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1rem;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: $color-main;
+        text-transform: uppercase;
+        font-family: $font-default;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: .5rem;
+
+        .text-box {
+            font-family: $font-default;
+            color: $color-text;
+            padding-top: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: normal;
+            text-transform: none;
+            letter-spacing: normal;
+
+        }
+    }
+
+}
+
+.blackcard {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 24px;
+
+    @media screen and(max-width: 768px) {
+        img {
+            width: 327px;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    @media screen and(min-width: 768px) and (max-width: 1440px) {
+        img {
+            width: 689px;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    @media screen and(min-width: 1440px) {
+        img {
+            width: 541px;
+            height: 308px;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        width: 327px;
+
+        h3 {
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 2.8rem;
+            line-height: 3.6rem;
+            text-align: center;
+            letter-spacing: 1.4px;
+        }
+
+        a {
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: 5px;
+            color: #ffffff;
+
+            .arrow {
+                height: 8px;
+                width: 4px;
+                margin-left: 21px;
+            }
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        &--tablet {
+            display: none;
+        }
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    @media screen and(min-width: 768px) and (max-width: 1440px) {
+        &--mobile {
+            display: none;
+        }
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    @media screen and(min-width: 1440px) {
+        &--tablet {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+        }
+    }
+}
