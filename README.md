@@ -20,4 +20,4 @@
 > SASS
 > JS
 
-#### To see the final result on GitHub Page : [GitHub Page]()
+#### To see the final result on GitHub Page : [GitHub Page](https://kiks4000.github.io/designo/)
