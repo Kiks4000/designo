@@ -8,57 +8,105 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="./src/css/nav.css">
     <link rel="stylesheet" href="./src/css/appDesign.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <script src="/src/sass/global/main.js"></script>
+    <link rel="stylesheet" href="./src/css/appDesign.css">
+    <script src="https://kit.fontawesome.com/e8976fc927.js" crossorigin="anonymous"></script>
 
     <title>App design</title>
 </head>
 
 <header>
-    <!--Nav-->
+    <nav class="navbar">
+        <a href="#"><img src="./Ressources/images/anewlogo.png" alt="designo logo"></a>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">our compagny</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">location</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
 </header>
 
 <body>
     <section>
-        <div class="banner">
-            <div class="bubble"></div>
-            <div class="semi-bubble"></div>
-            <h1 class="banner__title">App Design</h1>
-            <p class="banner__text">Our mobile designs bring intuitive digital solutions to your customers right at
-                their fingertips.</p>
-        </div>
+        <div class="back-bubble">
+            <div class="banner">
+                <!-- Mobile -->
+                <div class="mobile-bubble"></div>
+                <div class="mobile-bubble-semi"></div>
+
+                <!-- Tablette -->
+                <div class="tablet-bubble"></div>
+                <div class="tablet-bubble1"></div>
+                <div class="tablet-bubble2"></div>
+                <div class="tablet-bubble3"></div>
+
+                <div class="tablet-bubble-semi">
+
+                </div>
+
+                <!-- Ordi -->
+                <div class="desktop-bubble"></div>
+                <div class="desktop-bubble1"></div>
+                <div class="desktop-bubble2"></div>
+                <div class="desktop-bubble3"></div>
+
+
+
+
+                <div class="desktop-bubble-semi">
+                </div>
+                <div class="semi-bubble"></div>
+                <h1 class="banner__title">App Design</h1>
+                <p class="banner__text">Our mobile designs bring intuitive digital solutions to your customers right at
+                    their fingertips.</p>
+            </div>
 
     </section>
     <section>
         <div class="container-design">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4" id="airfilter">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="airfilter">
                     <img src="Ressources/images/airfiltrer.jpg" alt="" class="p-airfilter">
                     <div class="box">airfilter
                         <p class="text-box">Solving the problem of poor indoor air quality by filtering the air</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="eyecam">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="eyecam">
                     <img src="Ressources/images/eyecam.jpg" alt="" class="p-eyecam">
                     <div class="box">eyecam
                         <p class="text-box">Product that lets you edit your favorite photos and videos at any time</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="faceit">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="faceit">
                     <img src="Ressources/images/faceit.jpg" alt="" class="p-faceit">
                     <div class="box">faceit
                         <p class="text-box">
                             Get to meet your favorite internet superstar with the faceit app</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="todo">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="todo">
                     <img src="Ressources/images/todo.jpg" alt="" class="p-todo">
                     <div class="box">todo
                         <p class="text-box">
                             A todo app that features cloud sync with light and dark mode</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="loopstudios">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="loopstudios">
                     <img src="Ressources/images/loopstudio.jpg" alt="" class="p-loopstudios">
                     <div class="box">loopstudios
                         <p class="text-box">
@@ -68,8 +116,86 @@
             </div>
         </div>
     </section>
-    <section>
-        
+    
+    <section class="blackcard">
+        <div class="container-design">
+            <div class="row">
+                <div class="col-12 col-md-6 blackcard__item">
+                    <img src="./Ressources/images/Bitmap-1.jpg" alt="Bitmap" class="blackcard__img" />
+                    <div class="blackcard__content">
+                        <h3>App design</h3>
+                        <a href="webDesign.html">View projects <img src="./Ressources/images/Path-5.svg" class="arrow" alt="arrow" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 blackcard__item">
+                    <img src="./Ressources/images/Bitmap.jpg" alt="Webdesign" class="blackcard__img" />
+                    <div class="blackcard__content">
+                        <h3>Graphic design</h3>
+                        <a href="webDesign.html">View projects <img src="./Ressources/images/Path-5.svg" class="arrow" alt="arrow" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <footer>
+        <div class="footer__upper-container">
+            <img src="./Ressources/images/Group-28.png" alt="background mobile" class="mobile">
+            <img src="./Ressources/images/bg-tablette.png" alt="background tablette" class="tablet">
+            <img src="./Ressources/images/bgdesktop.png" alt="background desktop" class="desktop">
+            <div class="upper-content">
+                <div class="text">
+                    <h2 class="">Let’s talk about your project</h2>
+                    <p>Ready to take it to the next level? Contact us today and find out how our expertise can help
+                        your
+                        business grow.</p>
+                </div>
+                <a href="./contact.html">get in touch</a>
+            </div>
+        </div>
+        <div class="footer__lower-container">
+            <div class="footer__lower-container__tablet-container">
+                <div class="footer__lower-container__logo">
+                    <a href="./index.html">
+                        <img src="./Ressources/images/Oval-1.png" alt="designo logo">
+                        <img src="./Ressources/images/DESIGNO.svg" alt="designo logo">
+                    </a>
+                </div>
+                <hr class="footer__hr">
+                <nav class="footer__nav">
+                    <ul class="footer__nav__links">
+                        <li><a href="./about.html">our compagny</a></li>
+                        <li><a href="./locations.html">locations</a></li>
+                        <li><a href="./contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr class="footer__hr-tablet">
+            <div class="footer__lower-container__tablet-container-two">
+                <div class="footer__adress">
+                    <h3>Designo Central Office</h3>
+                    <p>386 Wellington Street <br> 1000 Brussels - Belgium</p>
+                </div>
+                <div class="footer__lower-contact">
+                    <h3>Contact Us (Central Office)</h3>
+                    <p>P : <a href="tel:+1 253-863-8967">+1 253-863-8967</a></p>
+                    <p>M : <a href="mailto:contact@designo.co?subject=Contact from the Website"
+                            target="_blank">contact@designo.co</a></p>
+                </div>
+                <section class="footer__social">
+                    <ul class="footer__social__list">
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-facebook-square"></i></a>
+                        </li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

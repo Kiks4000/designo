@@ -4,7 +4,6 @@
 
 header{
     background-color: white;
-    
     .navbar{
         width: 100%;
         min-height: 9.6rem;
@@ -29,13 +28,13 @@ header{
             justify-content: space-evenly;
             gap: 4.2rem;
             .nav-item{
-                @media screen and(min-width:375px) and(max-width:700px) {
+                @media screen and(max-width:700px) {
                     margin-bottom: 0.1rem;
                 }
                 a,
                 a:link,
                 a:visited{
-                    @media screen and(min-width:375px) and(max-width:700px) {
+                    @media screen and(max-width:700px) {
                         color: white; // change the color
                         font-size: 24px;
                     }
@@ -50,7 +49,7 @@ header{
                     transition: 0.5s ease;
                     position: relative;
                     &::after{
-                        @media screen and(min-width:375px) and(max-width:700px) {
+                        @media screen and(max-width:700px) {
                             background-color: white;
                         }
                         position: absolute;
@@ -72,52 +71,53 @@ header{
             }
         }
     }
-    .hamburger{
-        @media screen and(min-width:375px) and(max-width:700px) {
-            display: block;
-        }
-        display: none;
-        cursor: pointer;
-        .bar{
-            display: block;
-            width: 2.4rem;
-            height: 0.4rem;
-            margin: 0.4rem auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            background: black;
-        }
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    .bar{
+        display: block;
+        width: 2.4rem;
+        height: 0.4rem;
+        margin: 0.4rem auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background: black;
+    }
+    @media screen and (max-width:700px) {
+        display: block;
     }
 }
 
 /*< ----- Animations JS ----- >*/
 
 .hamburger.active .bar:nth-child(2){
-    @media screen and(min-width:375px) and(max-width:700px) {
+    @media screen and(max-width:700px) {
         opacity: 0;
     }
 }
 
 .hamburger.active .bar:nth-child(1){
-    @media screen and(min-width:375px) and(max-width:700px) {
+    @media screen and(max-width:700px) {
         transform: translateY(8px) rotate(45deg);
     }
 }
 
 .hamburger.active .bar:nth-child(3){
-    @media screen and(min-width:375px) and(max-width:700px) {
+    @media screen and(max-width:700px) {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
 
 .nav-menu.active{
-    @media screen and(min-width:375px) and(max-width:700px) {
+    @media screen and(max-width:700px) {
         left: 0;
     }
 }
 
 .nav-menu.active::after{
-    @media screen and(min-width:375px) and(max-width:700px) {
+    @media screen and(max-width:700px) {
         content: "";
         background-color: rgba(51,49,54,.4549019608);
         height: 100vh;
@@ -130,7 +130,7 @@ header{
 }
 
 .nav-menu{
-    @media screen and(min-width:375px) and(max-width:700px) {
+    @media screen and(max-width:700px) {
         position: fixed;
         z-index: 2;
         left:-100%;

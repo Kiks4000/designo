@@ -1,91 +1,107 @@
 .blackcard {
-  height: 100%;
   width: 100%;
   position: relative;
   text-align: center;
   color: white;
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 8rem 0 12rem;
 
-  @media screen and(max-width: 768px) {
-    img {
-      width: 327px;
-      height: 250px;
+  img {
+      border-radius: 2rem;
+      display: inline-block;
       object-fit: cover;
-    }
-  }
-
-  @media screen and(min-width: 768px) and (max-width: 1440px) {
-    img {
-      width: 689px;
-      height: 200px;
-      object-fit: cover;
-    }
-  }
-
-  @media screen and(min-width: 1440px) {
-    img {
-      width: 541px;
+      width: 100%;
       height: 308px;
-      object-fit: cover;
-    }
+
+      @media screen and (max-width: $tablet) {
+        height: 200px;
+      }
+      @media screen and (max-width: $mobile) {
+        height: 250px;
+      }
+  }
+
+  &__item {
+    position: relative;
   }
 
   &__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    width: 327px;
-    h3 {
-      font-family: "Jost";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 2.8rem;
-      line-height: 3.6rem;
-      text-align: center;
-      letter-spacing: 1.4px;
-    }
-    a {
-      font-family: "Jost";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 22px;
-      letter-spacing: 5px;
-      color: #ffffff;
-      .arrow {
-        height: 8px;
-        width: 4px;
-        margin-left: 21px;
+      position: absolute;
+      color: white;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+
+
+      h3 {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 4rem;
+          line-height: 3.6rem;
+          text-align: center;
+          letter-spacing: 1.4px;
+          margin-bottom: 2rem;
+          @media screen and (max-width: $mobile) {
+            font-size: 2.8rem;
+          }
       }
-    }
+
+      a {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 5px;
+          color: #ffffff;
+
+          .arrow {
+              height: 8px;
+              width: 4px;
+          }
+      }
   }
 
-  @media screen and(max-width: 768px) {
-    &--tablet {
-      display: none;
-    }
-    &--desktop {
-      display: none;
-    }
-  }
+  /*
+  &__content1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      width: 327px;
 
-  @media screen and(min-width: 768px) and (max-width: 1440px) {
-    &--mobile {
-      display: none;
-    }
-    &--desktop {
-      display: none;
-    }
-  }
+      h3 {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 2.8rem;
+          line-height: 3.6rem;
+          text-align: center;
+          letter-spacing: 1.4px;
+      }
 
-  @media screen and(min-width: 1440px) {
-    &--tablet {
-      display: none;
-    }
-    &--mobile {
-      display: none;
-    }
-  }
+      a {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 5px;
+          color: #ffffff;
+
+          .arrow {
+              height: 8px;
+              width: 4px;
+              margin-left: 21px;
+          }
+      }
+  }*/
 }

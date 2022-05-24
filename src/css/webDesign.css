@@ -5745,6 +5745,131 @@ a:link {
   }
 }
 /*# sourceMappingURL=bootstrap-grid.css.map */
+.blackcard {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  margin: 8rem 0 12rem;
+  /*
+  &__content1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      width: 327px;
+
+      h3 {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 2.8rem;
+          line-height: 3.6rem;
+          text-align: center;
+          letter-spacing: 1.4px;
+      }
+
+      a {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 5px;
+          color: #ffffff;
+
+          .arrow {
+              height: 8px;
+              width: 4px;
+              margin-left: 21px;
+          }
+      }
+  }*/
+}
+.blackcard img {
+  border-radius: 2rem;
+  display: inline-block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 308px;
+}
+@media screen and (max-width: 768px) {
+  .blackcard img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .blackcard img {
+    height: 250px;
+  }
+}
+.blackcard__item {
+  position: relative;
+}
+.blackcard__content {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+.blackcard__content h3 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 3.6rem;
+  text-align: center;
+  letter-spacing: 1.4px;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .blackcard__content h3 {
+    font-size: 2.8rem;
+  }
+}
+.blackcard__content a {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+.blackcard__content a .arrow {
+  height: 8px;
+  width: 4px;
+}
+
 /* < ----- Reset CSS ----- > */
 * {
   margin: 0;
@@ -5806,7 +5931,7 @@ header .navbar .nav-menu {
           justify-content: space-evenly;
   gap: 4.2rem;
 }
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   header .navbar .nav-menu .nav-item {
     margin-bottom: 0.1rem;
   }
@@ -5821,7 +5946,7 @@ header .navbar .nav-menu .nav-item a:visited {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   header .navbar .nav-menu .nav-item a,
 header .navbar .nav-menu .nav-item a:link,
 header .navbar .nav-menu .nav-item a:visited {
@@ -5851,7 +5976,7 @@ header .navbar .nav-menu .nav-item .nav-link::after {
   transition: transform 0.25s linear, -webkit-transform 0.25s linear;
   content: "";
 }
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   header .navbar .nav-menu .nav-item .nav-link::after {
     background-color: white;
   }
@@ -5862,16 +5987,12 @@ header .navbar .nav-menu .nav-item .nav-link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
-header .hamburger {
+
+.hamburger {
   display: none;
   cursor: pointer;
 }
-@media screen and (min-width: 375px) and (max-width: 700px) {
-  header .hamburger {
-    display: block;
-  }
-}
-header .hamburger .bar {
+.hamburger .bar {
   display: block;
   width: 2.4rem;
   height: 0.4rem;
@@ -5880,35 +6001,40 @@ header .hamburger .bar {
   transition: all 0.3s ease-in-out;
   background: black;
 }
+@media screen and (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+}
 
 /*< ----- Animations JS ----- >*/
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .hamburger.active .bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
             transform: translateY(8px) rotate(45deg);
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .nav-menu.active {
     left: 0;
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .nav-menu.active::after {
     content: "";
     background-color: rgba(51, 49, 54, 0.4549019608);
@@ -5921,7 +6047,7 @@ header .hamburger .bar {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .nav-menu {
     position: fixed;
     z-index: 2;
@@ -5942,7 +6068,6 @@ header .hamburger .bar {
 }
 
 body {
-  background-color: rgb(242, 242, 242);
   font-family: "Jost";
   font-size: 1.6rem;
   height: 100%;
@@ -5951,12 +6076,23 @@ body {
   text-align: center;
 }
 
-@media only screen and (min-width: 37.5rem) {
+.back-bubble {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media only screen and (max-width: 480px) {
+  .back-bubble {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .back-bubble {
     margin: 2rem;
   }
 }
-@media only screen and (min-width: 37.5rem) {
+@media only screen and (min-width: 480px) {
   .banner {
     border-radius: 1.5rem;
   }
@@ -5995,53 +6131,171 @@ body {
   position: relative;
   font-size: 1.5rem;
   line-height: 1.6;
+  max-width: 55%;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
-@media only screen and (min-width: 37.5rem) and (max-width: 144rem) {
+
+@media only screen and (min-width: 1440px) {
+  .banner__title {
+    font-size: 4.8rem;
+    font-style: medium;
+  }
+  .banner__text {
+    max-width: 25%;
+  }
+}
+[class^=desktop-bubble],
+[class*=desktop-bubble] {
+  width: 33rem;
+  height: 32rem;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@-webkit-keyframes move {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.desktop-bubble {
+  background: linear-gradient(11deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+  right: 0;
+  top: -14.5rem;
+  -webkit-animation: move 2s infinite;
+          animation: move 2s infinite;
+}
+
+.desktop-bubble1 {
+  background: linear-gradient(91deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+  right: 35rem;
+  top: -14.5rem;
+  -webkit-animation: move 2s 0.2s infinite;
+          animation: move 2s 0.2s infinite;
+}
+
+.desktop-bubble2 {
+  background: linear-gradient(91deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+  right: 35rem;
+  top: 17.5rem;
+  -webkit-animation: move 2s 0.4s infinite;
+          animation: move 2s 0.4s infinite;
+}
+
+.desktop-bubble3 {
+  background: linear-gradient(352deg, rgb(213, 118, 102) 0%, rgb(231, 129, 107) 100%);
+  right: 0rem;
+  top: 17.5rem;
+  -webkit-animation: move 2s 0.6s infinite;
+          animation: move 2s 0.6s infinite;
+}
+
+.desktop-bubble-semi {
+  background: linear-gradient(184deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+  right: 68rem;
+  top: -14.5rem;
+  -webkit-animation: move 2s 0.8s infinite;
+          animation: move 2s 0.8s infinite;
+}
+
+@media only screen and (max-width: 768px) {
+  [class^=desktop-bubble],
+[class*=desktop-bubble] {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  [class^=tablet-bubble],
+[class*=tablet-bubble] {
+    display: none;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .banner__title {
+    font-size: 4.8rem;
+  }
+
+  [class^=tablet-bubble],
+[class*=tablet-bubble] {
+    width: 30rem;
+    height: 29rem;
+    border-radius: 50%;
+    position: absolute;
+  }
+
   .tablet-bubble {
     background: linear-gradient(11deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
-    width: 30rem;
-    height: 29rem;
-    border-radius: 50%;
-    position: absolute;
     right: -18rem;
-    top: -13.5rem;
+    top: -12.5rem;
   }
 
-  .tablet-semi-bubble {
-    background: linear-gradient(80deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
-    width: 30rem;
-    height: 29rem;
-    border-radius: 50%;
-    position: absolute;
-    left: -25rem;
-    top: 0.5rem;
+  .tablet-bubble1 {
+    background: linear-gradient(91deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+    right: 12rem;
+    top: -12.5rem;
+  }
+
+  .tablet-bubble2 {
+    background: linear-gradient(91deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+    right: 12rem;
+    top: 16.5rem;
+  }
+
+  .tablet-bubble3 {
+    background: linear-gradient(317deg, rgb(213, 118, 102) 0%, rgb(231, 129, 107) 100%);
+    right: -18rem;
+    top: 16.5rem;
+  }
+
+  .tablet-bubble-semi {
+    background: linear-gradient(184deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+    right: 41.9rem;
+    top: -12.5rem;
   }
 }
-@media screen and (max-width: 37.5rem) {
-  .mobile-bubble {
-    background: linear-gradient(11deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+@media screen and (max-width: 480px) {
+  [class^=mobile-bubble],
+[class*=mobile-bubble] {
     width: 30rem;
     height: 29rem;
     border-radius: 50%;
     position: absolute;
-    left: 7rem;
+  }
+
+  .mobile-bubble {
+    background: linear-gradient(11deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
+    right: 0;
     top: 0.5rem;
   }
 
-  .mobile-semi-bubble {
+  .mobile-bubble-semi {
     background: linear-gradient(80deg, rgb(210, 109, 91) 0%, rgb(231, 129, 107) 100%);
-    width: 30rem;
-    height: 29rem;
-    border-radius: 50%;
-    position: absolute;
-    left: -25rem;
+    right: 30rem;
     top: 0.5rem;
   }
 }
 .container-design {
-  max-width: 1110px;
-  margin: auto;
-  padding: 2rem 2.5rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6064,13 +6318,16 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.container-design .design-items {
+  margin-bottom: 3rem;
+}
 .container-design .box {
   background-color: rgb(253, 243, 240);
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1rem;
   width: 100%;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   color: rgb(231, 129, 107);
   text-transform: uppercase;
   font-size: 2rem;
@@ -6084,122 +6341,13 @@ body {
   padding-right: 2rem;
   font-size: 1.6rem;
   font-weight: 400;
-  text-transform: block;
   letter-spacing: normal;
   text-transform: none;
 }
-.container-design .b-card {
-  margin-top: 4rem;
-}
-.container-design .blackcard {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  text-align: center;
+.container-design .box:hover {
+  background-color: rgb(231, 129, 107);
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 3rem;
 }
-.container-design .blackcard img {
-  border-radius: 2rem;
-  display: inline-block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media screen and (max-width: 768px) {
-  .container-design .blackcard img {
-    width: 327px;
-    height: 250px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .container-design .blackcard img {
-    width: 689px;
-    height: 200px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .container-design .blackcard img {
-    width: 541px;
-    height: 308px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-.container-design .blackcard__content {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.container-design .box:hover .text-box {
   color: white;
-  width: 327px;
-}
-.container-design .blackcard__content h3 {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.8rem;
-  line-height: 3.6rem;
-  text-align: center;
-  letter-spacing: 1.4px;
-}
-.container-design .blackcard__content a {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 22px;
-  letter-spacing: 5px;
-  color: #ffffff;
-}
-.container-design .blackcard__content a .arrow {
-  height: 8px;
-  width: 4px;
-  margin-left: 21px;
-}
-.container-design .blackcard__content1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: white;
-  width: 327px;
-}
-.container-design .blackcard__content1 h3 {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.8rem;
-  line-height: 3.6rem;
-  text-align: center;
-  letter-spacing: 1.4px;
-}
-.container-design .blackcard__content1 a {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 22px;
-  letter-spacing: 5px;
-  color: #ffffff;
-}
-.container-design .blackcard__content1 a .arrow {
-  height: 8px;
-  width: 4px;
-  margin-left: 21px;
 }/*# sourceMappingURL=webDesign.css.map */

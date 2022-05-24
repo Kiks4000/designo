@@ -2,7 +2,8 @@
 @import "./global/mixins";
 @import './global/reset';
 @import './global/grid';
-@import "/src/sass/nav.scss";
+@import './blackCards';
+@import './nav.scss';
 
 body {
     font-family: $font-default;
@@ -13,8 +14,18 @@ body {
     text-align: center;
 }
 
+
+.back-bubble {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    @media only screen and (max-width: $mobile) {
+        padding: 0;
+    }
+}
+
 // Bannière avec les cercles + texte
-@media only screen and (min-width: $mobile) {
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
     .back-bubble {
         margin: 2rem;
     }
@@ -25,6 +36,7 @@ body {
         border-radius: 1.5rem;
     }
 }
+
 .banner {
     background-color: $color-main;
     color: $color-second;
@@ -41,7 +53,7 @@ body {
     position: relative;
     overflow: hidden;
 
-  
+
     &__title {
         font-weight: 500;
         position: relative;
@@ -54,73 +66,180 @@ body {
         position: relative;
         font-size: 1.5rem;
         line-height: 1.6;
+        max-width: 55%;
+        align-self: center;
     }
+}
 
-    //Desktop responsive
-    @media screen and (min-width: $desktop) {
-    
-            
+//Desktop responsive
+@media only screen and (min-width: $desktop) {
+    .banner {
+        &__title {
+            font-size: 4.8rem;
+            font-style: medium;
+        }
+
+        &__text {
+            max-width: 25%;
         }
     }
-    //Tablet responsive
-    @media only screen and (min-width: $mobile) and (max-width: $desktop) {
-        .tablet-bubble {
-            @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 11deg);
-            width: 30rem;
-            height: 29rem;
-            border-radius: 50%;
-            position: absolute;
-            right: -18rem;
-            top: -13.5rem;
-        }
-        .tablet-semi-bubble {
-            @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 80deg);
-            width: 30rem;
-            height: 29rem;
-            border-radius: 50%;
-            position: absolute;
-            left: -25rem;
-            top: 0.5rem;
-        }
-    }
-    //Mobile responsive
-    @media screen and (max-width: $mobile) {
-        .mobile-bubble {
-            @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 11deg);
-            width: 30rem;
-            height: 29rem;
-            border-radius: 50%;
-            position: absolute;
-            left: 7rem;
-            top: 0.5rem;
-        }
-    
-        .mobile-semi-bubble {
-            @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 80deg);
-            width: 30rem;
-            height: 29rem;
-            border-radius: 50%;
-            position: absolute;
-            left: -25rem;
-            top: 0.5rem;
-        }
 }
 
 
-// Cartes images avec le texte qui l'accompagne
-@media screen and (min-width: $desktop) {
+//Bulles dans la banner
+[class^="desktop-bubble"],
+[class*="desktop-bubble"] {
+    width: 33rem;
+    height: 32rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes move {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.desktop-bubble {
+    @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 11deg);
+    right: 0;
+    top: -14.5rem;
+    animation: move 2s infinite;
+}
+
+.desktop-bubble1 {
+    @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 91deg);
+    right: 35rem;
+    top: -14.5rem;
+    animation: move 2s 0.2s infinite;
+}
+
+.desktop-bubble2 {
+    @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 91deg);
+    right: 35rem;
+    top: 17.5rem;
+    animation: move 2s 0.4s infinite;
+}
+
+.desktop-bubble3 {
+    @include gradient-bubble(rgb(213, 118, 102), rgba(231, 129, 107, 1), 352deg);
+    right: 0rem;
+    top: 17.5rem;
+    animation: move 2s 0.6s infinite;
+}
+
+.desktop-bubble-semi {
+    @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 184deg);
+    right: 68rem;
+    top: -14.5rem;
+    animation: move 2s 0.8s infinite;
+}
+
+//On cache les bulles desktop sur tablet
+@media only screen and (max-width: $tablet) {
+    [class^="desktop-bubble"],
+    [class*="desktop-bubble"] {
+        display: none;
+    }
+}
+
+//On cache les bulles tablet sur mobile
+@media only screen and (max-width: $mobile) {
+    [class^="tablet-bubble"],
+    [class*="tablet-bubble"] {
+        display: none;
+    }
+}
+
+//Tablet responsive
+@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+    .banner {
+        &__title {
+            font-size: 4.8rem;
+        }
+    }
+    
+    [class^="tablet-bubble"],
+    [class*="tablet-bubble"] {
+        width: 30rem;
+        height: 29rem;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .tablet-bubble {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 11deg);
+        right: -18rem;
+        top: -12.5rem;
+    }
+
+    .tablet-bubble1 {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 91deg);
+        right: 12rem;
+        top: -12.5rem;
+    }
+
+    .tablet-bubble2 {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 91deg);
+        right: 12rem;
+        top: 16.5rem;
+    }
+
+    .tablet-bubble3 {
+        @include gradient-bubble(rgb(213, 118, 102), rgba(231, 129, 107, 1), 317deg);
+        right: -18rem;
+        top: 16.5rem;
+    }
+
+    .tablet-bubble-semi {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 184deg);
+        right: 41.9rem;
+        top: -12.5rem;
+    }
+}
+
+//Mobile responsive
+@media screen and (max-width: $mobile) {
+    [class^="mobile-bubble"],
+    [class*="mobile-bubble"] {
+        width: 30rem;
+        height: 29rem;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .mobile-bubble {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 11deg);
+        right: 0;
+        top: 0.5rem;
+    }
+
+    .mobile-bubble-semi {
+        @include gradient-bubble(rgba(210, 109, 91, 1), rgba(231, 129, 107, 1), 80deg);
+        right: 30rem;
+        top: 0.5rem;
+    }
 
 }
-    
+
+
+//Bloc texte / image
 .container-design {
-    max-width: 1110px;
-    margin: auto;
-    padding: 2rem 2.5rem;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-// Classe image
+    // Classe image
     .p-express,
     .p-transfer,
     .p-photon,
@@ -131,21 +250,26 @@ body {
         width: 100%;
         object-fit: contain;
     }
-// Fond du box texte
+
+    .design-items {
+        margin-bottom: 3rem;
+    }
+
+    // Fond du box texte
     .box {
         background-color: $color-box;
         border-bottom-left-radius: 1em;
         border-bottom-right-radius: 1rem;
-        width: 100%;    
+        width: 100%;
         padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
         color: $color-main;
         text-transform: uppercase;
         font-size: 2rem;
         font-weight: 500;
         letter-spacing: .5rem;
-        
-// Texte du box
+
+        // Texte du box
         .text-box {
             color: $color-text;
             padding-top: 2rem;
@@ -153,127 +277,16 @@ body {
             padding-right: 2rem;
             font-size: 1.6rem;
             font-weight: 400;
-            text-transform: block;
             letter-spacing: normal;
             text-transform: none;
 
         }
-    }
-
-.b-card {
-    margin-top: 4rem;
-}
-
-.blackcard {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-
-    img {
-        border-radius: 2rem;
-        display: inline-block;
-        object-fit: cover;
-    }
-
-    @media screen and(max-width: 768px) {
-        img {
-            width: 327px;
-            height: 250px;
-            object-fit: cover;
-        }
-    }
-
-    @media screen and(min-width: 768px) and (max-width: 1440px) {
-        img {
-            width: 689px;
-            height: 200px;
-            object-fit: cover;
-        }
-    }
-
-    @media screen and(min-width: 1440px) {
-        img {
-            width: 541px;
-            height: 308px;
-            object-fit: cover;
-        }
-    }
-
-    &__content {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        width: 327px;
-
-
-        h3 {
-            font-family: "Jost";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 2.8rem;
-            line-height: 3.6rem;
-            text-align: center;
-            letter-spacing: 1.4px;
-        }
-
-        a {
-            font-family: "Jost";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 22px;
-            letter-spacing: 5px;
-            color: #ffffff;
-
-            .arrow {
-                height: 8px;
-                width: 4px;
-                margin-left: 21px;
+        &:hover {
+            background-color: $color-main;
+            color: white;
+            .text-box {
+                color: white;
             }
         }
     }
-
-    &__content1 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        width: 327px;
-
-        h3 {
-            font-family: "Jost";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 2.8rem;
-            line-height: 3.6rem;
-            text-align: center;
-            letter-spacing: 1.4px;
-        }
-
-        a {
-            font-family: "Jost";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 22px;
-            letter-spacing: 5px;
-            color: #ffffff;
-
-            .arrow {
-                height: 8px;
-                width: 4px;
-                margin-left: 21px;
-            }
-        }
-    }
-}
 }

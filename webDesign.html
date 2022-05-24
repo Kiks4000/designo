@@ -8,17 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/webDesign.css">
     <link rel="stylesheet" href="./src/css/nav.css">
+    <link rel="stylesheet" href="./src/css/webDesign.css">
     <link rel="stylesheet" href="./src/css/footer.css">
-    <script src="/src/sass/global/main.js"></script>
+    <script src="./src/sass/global/main.js"></script>
+    <script src="https://kit.fontawesome.com/e8976fc927.js" crossorigin="anonymous"></script>
+
 
     <title>Web design</title>
 </head>
-<header>   
+<header>
     <nav class="navbar">
-        <a href="#"><img src="/Ressources/images/anewlogo.png" alt="designo logo"></a>
-    
+        <a href="#"><img src="./Ressources/images/anewlogo.png" alt="designo logo"></a>
+
         <ul class="nav-menu">
             <li class="nav-item">
                 <a href="#" class="nav-link">our compagny</a>
@@ -35,33 +37,35 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-        <script src="/src/sass/global/main.js"></script>
     </nav>
 </header>
+
 <body>
     <!-- Bannière avec le texte + fond de bulles -->
     <section class="back-bubble">
         <div class="banner">
 
             <!-- Mobile -->
-            <div class="mobile-bubble"></div> 
-            <div class="mobile-semi-bubble"></div>
+            <div class="mobile-bubble"></div>
+            <div class="mobile-bubble-semi"></div>
 
             <!-- Tablette -->
-            <div class="tablet-bubble">
-                <span class="bulle-1"></span>
-                <span class="bulle-2"></span>
-            </div>
-            <div class="tablet-semi-bubble">
+            <div class="tablet-bubble"></div>
+            <div class="tablet-bubble1"></div>
+            <div class="tablet-bubble2"></div>
+            <div class="tablet-bubble3"></div>
+
+            <div class="tablet-bubble-semi">
 
             </div>
 
             <!-- Ordi -->
-            <div class="desktop-bubble">
+            <div class="desktop-bubble"></div>
+            <div class="desktop-bubble1"></div>
+            <div class="desktop-bubble2"></div>
+            <div class="desktop-bubble3"></div>
 
-            </div>
-            <div class="desktop-semi-bubble">
-
+            <div class="desktop-bubble-semi">
             </div>
 
             <!-- Titre + texte de la bannière -->
@@ -76,41 +80,41 @@
         <div class="container-design">
             <div class="row">
                 <!-- Grid en responsive -->
-                <div class="col-12 col-sm-6 col-md-4" id="express">
-                    <img src="Ressources/images/camion.jpg" alt="" class="p-express">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="express">
+                    <img src="./Ressources/images/camion.jpg" alt="" class="p-express">
                     <div class="box">express
                         <p class="text-box">A multi-carrier shipping website for ecommerce businesses</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="transfer">
-                    <img src="Ressources/images/mobile-transfer.jpg" alt="" class="p-transfer">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="transfer">
+                    <img src="./Ressources/images/mobile-transfer.jpg" alt="" class="p-transfer">
                     <div class="box">transfer
                         <p class="text-box">Site for low-cost money transfers and sending money within seconds</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="photon">
-                    <img src="Ressources/images/photon.jpg" alt="" class="p-photon">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="photon">
+                    <img src="./Ressources/images/photon.jpg" alt="" class="p-photon">
                     <div class="box">photon
                         <p class="text-box">
                             A state-of-art music player with high-resolution audio and DSP effects</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="builder">
-                    <img src="Ressources/images/bureau.jpg" alt="" class="p-builder">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="builder">
+                    <img src="./Ressources/images/bureau.jpg" alt="" class="p-builder">
                     <div class="box">builder
                         <p class="text-box">
                             Connects users with local contractors based on their location</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="blogr">
-                    <img src="Ressources/images/blog.jpg" alt="" class="p-blogr">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="blogr">
+                    <img src="./Ressources/images/blog.jpg" alt="" class="p-blogr">
                     <div class="box">blogr
                         <p class="text-box">
                             Blogr is a platform for creating an online blog or publication</p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4" id="camp">
-                    <img src="Ressources/images/camp.jpg" alt="" class="p-camp">
+                <div class="col-12 col-sm-6 col-md-4 design-items" id="camp">
+                    <img src="./Ressources/images/camp.jpg" alt="" class="p-camp">
                     <div class="box">camp
                         <p class="text-box">
                             Get expert training in coding, data, design, and digital marketing</p>
@@ -119,7 +123,85 @@
             </div>
         </div>
     </section>
-
+    <section class="blackcard">
+        <div class="container-design">
+            <div class="row">
+                <div class="col-12 col-md-6 blackcard__item">
+                    <img src="./Ressources/images/Bitmap-1.jpg" alt="Bitmap" class="blackcard__img" />
+                    <div class="blackcard__content">
+                        <h3>App design</h3>
+                        <a href="webDesign.html">View projects <img src="./Ressources/images/Path-5.svg" class="arrow" alt="arrow" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 blackcard__item">
+                    <img src="./Ressources/images/Bitmap.jpg" alt="Webdesign" class="blackcard__img" />
+                    <div class="blackcard__content">
+                        <h3>Graphic design</h3>
+                        <a href="webDesign.html">View projects <img src="./Ressources/images/Path-5.svg" class="arrow" alt="arrow" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__upper-container">
+            <img src="./Ressources/images/Group-28.png" alt="background mobile" class="mobile">
+            <img src="./Ressources/images/bg-tablette.png" alt="background tablette" class="tablet">
+            <img src="./Ressources/images/bgdesktop.png" alt="background desktop" class="desktop">
+            <div class="upper-content">
+                <div class="text">
+                    <h2 class="">Let’s talk about your project</h2>
+                    <p>Ready to take it to the next level? Contact us today and find out how our expertise can help
+                        your
+                        business grow.</p>
+                </div>
+                <a href="./contact.html">get in touch</a>
+            </div>
+        </div>
+        <div class="footer__lower-container">
+            <div class="footer__lower-container__tablet-container">
+                <div class="footer__lower-container__logo">
+                    <a href="./index.html">
+                        <img src="./Ressources/images/Oval-1.png" alt="designo logo">
+                        <img src="./Ressources/images/DESIGNO.svg" alt="designo logo">
+                    </a>
+                </div>
+                <hr class="footer__hr">
+                <nav class="footer__nav">
+                    <ul class="footer__nav__links">
+                        <li><a href="./about.html">our compagny</a></li>
+                        <li><a href="./locations.html">locations</a></li>
+                        <li><a href="./contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr class="footer__hr-tablet">
+            <div class="footer__lower-container__tablet-container-two">
+                <div class="footer__adress">
+                    <h3>Designo Central Office</h3>
+                    <p>386 Wellington Street <br> 1000 Brussels - Belgium</p>
+                </div>
+                <div class="footer__lower-contact">
+                    <h3>Contact Us (Central Office)</h3>
+                    <p>P : <a href="tel:+1 253-863-8967">+1 253-863-8967</a></p>
+                    <p>M : <a href="mailto:contact@designo.co?subject=Contact from the Website"
+                            target="_blank">contact@designo.co</a></p>
+                </div>
+                <section class="footer__social">
+                    <ul class="footer__social__list">
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-facebook-square"></i></a>
+                        </li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href="#" class="footer__social__icon"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
