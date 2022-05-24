@@ -4,19 +4,19 @@
 .contact {
   height: 764px;
   width: 100%;
-  background-image: url("/Ressources/images/bg_contact_mobile.png");
+  background-image: url("../../Ressources/images/bg_contact_mobile.png");
   background-repeat: no-repeat;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 
   @media screen and(min-width: 768px) and (max-width: 1440px) {
-    background-image: url("/Ressources/images/bg_contact_tablet.png");
+    background-image: url("../../Ressources/images/bg_contact_tablet.png");
     width: 689px;
     height: 711px;
   }
   @media screen and(min-width: 1440px) {
-    background-image: url("/Ressources/images/bg_contact_desktop.png");
+    background-image: url("../../Ressources/images/bg_contact_desktop.png");
     width: 1111px;
     height: 480px;
     flex-direction: row;
@@ -180,6 +180,7 @@
           margin: 0 auto;
           opacity: 1;
           padding-left: 0;
+          transition: ease-in 0.3s;
         }
         .button:hover {
           background-color: #ffad9b;
@@ -257,6 +258,7 @@
         text-transform: uppercase;
         color: white;
         margin: 0 auto;
+        transition: ease-in 0.3s;
       }
       a:hover {
         position: relative;

@@ -3,7 +3,6 @@
 @import './global/reset';
 @import './global/grid';
 @import './blackCards';
-@import './nav.scss';
 
 body {
     font-family: $font-default;
@@ -274,6 +273,7 @@ body {
         font-size: 2rem;
         font-weight: 500;
         letter-spacing: .5rem;
+        transition: ease-in 0.3s;
 
         // Texte du box
         .text-box {
@@ -285,6 +285,7 @@ body {
             font-weight: 400;
             letter-spacing: normal;
             text-transform: none;
+            transition: ease-in 0.3s;
 
         }
         &:hover {

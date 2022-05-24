@@ -105,6 +105,7 @@
       text-transform: uppercase;
       color: black;
       margin: 0 auto;
+      transition: ease-in 0.3s;
       @media screen and(min-width: 1440px) {
         margin: 0 127px 39px 95px;
         font-size: 16px;

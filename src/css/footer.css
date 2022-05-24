@@ -311,6 +311,9 @@ footer .footer__lower-container {
     margin-bottom: 4rem;
   }
 }
+footer .footer__lower-container .footer__lower-container__tablet-container .footer__lower-container__logo {
+  gap: 1.7rem;
+}
 footer .footer__lower-container .footer__lower-container__tablet-container .footer__lower-container__logo a {
   display: -webkit-box;
   display: -ms-flexbox;

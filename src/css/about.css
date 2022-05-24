@@ -373,6 +373,8 @@ body {
   text-transform: uppercase;
   color: white;
   margin: 0 auto;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
 }
 .locations ul li a:hover {
   position: relative;
