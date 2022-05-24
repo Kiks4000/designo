@@ -31,6 +31,11 @@ a:link {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*!
  * Bootstrap Grid v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -6320,6 +6325,12 @@ body {
 }
 .container-design .design-items {
   margin-bottom: 3rem;
+}
+.container-design .design-items img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container-design .box {
   background-color: rgb(253, 243, 240);

@@ -253,6 +253,11 @@ body {
 
     .design-items {
         margin-bottom: 3rem;
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     // Fond du box texte
